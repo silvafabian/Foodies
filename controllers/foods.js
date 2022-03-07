@@ -28,7 +28,23 @@ function create(req, res) {
   })
 }
 
+function show(req, res) {
+  Food.findById(req.params.id)
+  .populate("owner")
+  .then(food => {
+    res.render('foods/show', {
+      food,
+      title: "🌮 show"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/foods')
+  })
+}
+
 export {
   index,
   create,
+  show,
 }

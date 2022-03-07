@@ -24,9 +24,7 @@
   <h2>Explore new food!</h2>
 	<ul>
   <% foods.forEach(food => { %>
-    
     <a href="/foods/<%= food._id %>"><%= food.name %></a>
-    <li><%= food.name %> is <%= food.tasty ? 'tasty' : 'not tasty' %></li>
   <% }) %>
   </ul>
 </section>
