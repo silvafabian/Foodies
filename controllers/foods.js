@@ -1,4 +1,3 @@
-import { shallowCopy } from 'ejs/lib/utils'
 import { Food } from '../models/food.js'
 
 function index(req, res) {
@@ -15,6 +14,7 @@ function index(req, res) {
     res.redirect('/foods')
   })
 }
+
 function create(req, res) {
   console.log('this is create')
   req.body.owner = req.user.profile._id
@@ -28,23 +28,7 @@ function create(req, res) {
   })
 }
 
-// function show(req, res) {
-//   Food.findById(req.params.id)
-//   .populate("owner")
-//   .then(food => {
-//     res.render('foods/show', {
-//       food,
-//       title: "show"
-//     })
-//   })
-//   .catch(err => {
-//     console.log(err)
-//     res.redirect('/foods')
-//   })
-// }
-
 export {
   index,
   create,
-  // show,
 }
