@@ -6,7 +6,7 @@ function index(req, res) {
   .then(foods => {
     res.render('foods/index', {
       foods,
-      title: 'All Food',
+      title: 'Delicious Food',
     })
   })
   .catch(err => {
@@ -34,7 +34,21 @@ function show(req, res) {
   .then(food => {
     res.render('foods/show', {
       food,
-      title: "Some title"
+      title: "Food Details"
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/foods')
+  })
+}
+
+function edit(req, res) {
+  Food.findById(req.params.id)
+  .then(food => {
+    res.render('foods/edit', {
+      food,
+      title: "Edit Food"
     })
   })
   .catch(err => {
@@ -47,4 +61,5 @@ export {
   index,
   create,
   show,
+  edit,
 }

@@ -12,8 +12,8 @@
       </label>
       <br>
       <label>
-        Prep Time:
-        <input type="text" name="prepTime">
+        Prep Time (Number Only, In Mins.):
+        <input type="number" name="prepTime" min="1" max="1000">
       </label>
       <br>
       <label>
@@ -28,6 +28,7 @@
 	<ul>
   <% foods.forEach(food => { %>
     <a href="/foods/<%= food._id %>"><%= food.name %></a>
+    <br>
   <% }) %>
   </ul>
 </section>
