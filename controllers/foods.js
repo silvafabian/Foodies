@@ -65,7 +65,8 @@ function update(req, res) {
       .then(()=> {
         res.redirect(`/foods/${food._id}`)
       })
-    } else {
+    } 
+    else {
       throw new Error ('🚫 Not authorized 🚫')
     }
   })
@@ -75,10 +76,30 @@ function update(req, res) {
   })
 }
 
+function deleteFood(req, res) {
+  Food.findById(req.params.id)
+  .then(food => {
+    if (food.owner.equals(req.user.profile._id)) {
+      food.delete()
+      .then(() => {
+        res.redirect('/foods')
+      })
+    } 
+    else {
+      throw new Error ("Cannot Delete Food That Doesn't Belong To You!")
+    }   
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/foods')
+  })
+}
+
 export {
   index,
   create,
   show,
   edit,
   update,
+  deleteFood as delete,
 }

@@ -17,6 +17,9 @@ router.post('/', isLoggedIn, foodsCtrl.create)
 //PUT - localhost:3000/foods/:id
 router.put('/:id', foodsCtrl.update)
 
+// DELETE - localhost:3000/foods/:id
+router.delete('/:id', isLoggedIn, foodsCtrl.delete)
+
 
 
 
