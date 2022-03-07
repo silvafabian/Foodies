@@ -14,6 +14,12 @@ router.get('/:id/edit', isLoggedIn, foodsCtrl.edit)
 //POST - localhost:3000/foods
 router.post('/', isLoggedIn, foodsCtrl.create)
 
+//PUT - localhost:3000/foods/:id
+router.put('/:id', foodsCtrl.update)
+
+
+
+
 export {
   router,
 }

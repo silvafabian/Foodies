@@ -57,9 +57,28 @@ function edit(req, res) {
   })
 }
 
+function update(req, res) {
+  Food.findById(req.params.id)
+  .then(food => {
+    if (food.owner.equals(req.user.profile._id)) {
+      food.updateOne(req.body, {new: true})
+      .then(()=> {
+        res.redirect(`/foods/${food._id}`)
+      })
+    } else {
+      throw new Error ('🚫 Not authorized 🚫')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/foods`)
+  })
+}
+
 export {
   index,
   create,
   show,
   edit,
+  update,
 }

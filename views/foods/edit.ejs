@@ -4,23 +4,21 @@
 <section>
   <h1>Edit Your Food</h1>
   <form id="edit-form" action="/foods/<%= food._id %>?_method=PUT" method="POST">
-    <form action="/foods" method="POST">
-      <label>
-        Name: 
-        <input type="text" name="name" value="<%= food.name %>" autocomplete="off">
-      </label>
-      <br>
-      <label>
-        Prep Time:
-        <input type="number" name="prepTime" value="<%= food.prepTime %>" min="1" max="1000">
-      </label>
-      <br>
-      <label>
-        Ingredients:
-        <input type="text" name="ingredients" value="<%= food.ingredients %>">
-      </label>
-      <br>
-    </form>
+    <label>
+      Name: 
+      <input type="text" name="name" value="<%= food.name %>" autocomplete="off">
+    </label>
+    <br>
+    <label>
+      Prep Time:
+      <input type="number" name="prepTime" value="<%= food.prepTime %>" min="1" max="1000">
+    </label>
+    <br>
+    <label>
+      Ingredients:
+      <input type="text" name="ingredients" value="<%= food.ingredients %>">
+    </label>
+    <br>
     <button type="submit">Edit Food</button>
   </form>
 </section>
