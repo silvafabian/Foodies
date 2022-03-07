@@ -13,7 +13,8 @@ const foodSchema = new Schema ({
   },
   ingredients: {
     type: String,
-  }
+  },
+  owner: {type: Schema.Types.ObjectId, ref: "Profile"},
 })
 
 const Food = mongoose.model("Food", foodSchema)
