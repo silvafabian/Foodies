@@ -3,9 +3,29 @@
 
 <section>
   <h1>Food! 🍔 🌭 🍕</h1>
+  <% if (user) { %>
+    <h2>Add some Food!</h2>
+    <form action="/foods" method="POST">
+      <label>
+        Name: 
+        <input type="text" name="name" autocomplete="off">
+      </label>
+      <label>
+        Prep Time:
+        <input type="text" name="prepTime">
+      </label>
+      <label>
+        Ingredients:
+        <input type="text" name="ingredients">
+      </label>
+      <button type="submit">Add Food</button>
+    </form>
+  <% } %>
   <h2>Explore new food!</h2>
 	<ul>
   <% foods.forEach(food => { %>
+    
+    <a href="/foods/<%= food._id %>"><%= food.name %></a>
     <li><%= food.name %> is <%= food.tasty ? 'tasty' : 'not tasty' %></li>
   <% }) %>
   </ul>
