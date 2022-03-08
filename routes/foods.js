@@ -22,6 +22,8 @@ router.put('/:id', foodsCtrl.update)
 // DELETE - localhost:3000/foods/:id
 router.delete('/:id', isLoggedIn, foodsCtrl.delete)
 
+router.delete('/:id/reviews/:reviewId', foodsCtrl.deleteReview)
+
 
 
 

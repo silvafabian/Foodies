@@ -96,16 +96,20 @@ function deleteFood(req, res) {
 }
 
 function createReview(req, res) {
-  Food.findById(req.params.id)
-  .then (err, food => {
+  Food.findById(req.params.id, function(err, food) {
     food.reviews.push(req.body)
     food.save(function(err) {
       res.redirect(`/foods/${food._id}`)
     })
   })
-  .catch(err => {
-    console.log(err)
-    res.redirect(`/foods/${food._id}`)
+}
+
+function deleteReview(req, res) {
+  Food.findById(req.params.id, function(err, food) {
+    food.reviews.id(req.params.reviewId).remove()
+    food.save(function(err){
+      res.redirect(`/foods/${food._id}`)
+    })
   })
 }
 
@@ -117,4 +121,5 @@ export {
   update,
   deleteFood as delete,
   createReview,
+  deleteReview
 }
