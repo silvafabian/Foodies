@@ -10,6 +10,54 @@
       <li>Prep Time: <%= food.prepTime %></li>
       <li>Ingredients: <%= food.ingredients %></li>
     </ul>
+    <h2>Reviews</h2>
+  <form 
+    action="/foods/<%= food._id %>/reviews"
+    id="add-review-form"
+    method="post"
+  >
+    <label for="content-textarea">Review:</label>
+    <textarea name="content" id="content-textarea"></textarea>
+    <label for="rating-select">Rating:</label>
+    <select name="rating" id="rating-select">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5" selected>5</option>
+    </select>
+    <button type="submit">Add Review</button>
+  </form>
+    <% if (food.reviews.length) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Review</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% let total = 0 %> 
+          <% food.reviews.forEach(function(review) { %>
+            <% total += review.rating %> 
+            <tr>
+              <td><%= review.createdAt.toLocaleDateString() %></td>
+              <td><%= review.content %></td>
+              <td><%= review.rating %></td>
+            </tr>
+          <% }) %>
+          <tr>
+            <td colspan="2"></td>
+            <td>
+              <strong><%= (total / food.reviews.length).toFixed(1) %></strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    <% } else { %>
+      <h3>No Reviews Yet</h3>
+    <% } %> 
     <% if (food.owner.equals(user?.profile._id)) { %>
       <form action="/foods/<%= food._id %>/edit" method="GET">
         <button class="btn" type="submit"> Edit this food</button>
@@ -19,6 +67,7 @@
       </form>
     <% } %>
   </section>
+
 </main>
 
 <%- include('../partials/footer') %>

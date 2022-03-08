@@ -95,6 +95,20 @@ function deleteFood(req, res) {
   })
 }
 
+function createReview(req, res) {
+  Food.findById(req.params.id)
+  .then (err, food => {
+    food.reviews.push(req.body)
+    food.save(function(err) {
+      res.redirect(`/foods/${food._id}`)
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/foods/${food._id}`)
+  })
+}
+
 export {
   index,
   create,
@@ -102,4 +116,5 @@ export {
   edit,
   update,
   deleteFood as delete,
+  createReview,
 }

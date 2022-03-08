@@ -13,6 +13,8 @@ router.get('/:id/edit', isLoggedIn, foodsCtrl.edit)
 
 //POST - localhost:3000/foods
 router.post('/', isLoggedIn, foodsCtrl.create)
+//POST - localhost:3000/:id/reviews
+router.post("/:id/reviews", isLoggedIn, foodsCtrl.createReview)
 
 //PUT - localhost:3000/foods/:id
 router.put('/:id', foodsCtrl.update)
