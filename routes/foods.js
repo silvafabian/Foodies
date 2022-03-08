@@ -7,7 +7,7 @@ const router = Router()
 // GET - localhost:3000/foods
 router.get('/', foodsCtrl.index)
 //GET - localhost:3000/foods/:id
-router.get('/:id', foodsCtrl.show)
+router.get('/:id', isLoggedIn, foodsCtrl.show)
 // GET - localhost:3000/foods/:id/edit
 router.get('/:id/edit', isLoggedIn, foodsCtrl.edit)
 
@@ -17,15 +17,12 @@ router.post('/', isLoggedIn, foodsCtrl.create)
 router.post("/:id/reviews", isLoggedIn, foodsCtrl.createReview)
 
 //PUT - localhost:3000/foods/:id
-router.put('/:id', foodsCtrl.update)
+router.put('/:id', isLoggedIn, foodsCtrl.update)
 
 // DELETE - localhost:3000/foods/:id
 router.delete('/:id', isLoggedIn, foodsCtrl.delete)
 
-router.delete('/:id/reviews/:reviewId', foodsCtrl.deleteReview)
-
-
-
+router.delete('/:id/reviews/:reviewId', isLoggedIn, foodsCtrl.deleteReview)
 
 export {
   router,
