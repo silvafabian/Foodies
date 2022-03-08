@@ -1,13 +1,14 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/show.css">
 <%- include('../partials/nav') %>
 
 <main>
   <section>
     <p>Originally Created By: <%= food.owner.name %></p>
     <ul>
-      <li><%= food.name %></li>
-      <li><%= food.prepTime %></li>
-      <li><%= food.ingredients %></li>
+      <li>Name: <%= food.name %></li>
+      <li>Prep Time: <%= food.prepTime %></li>
+      <li>Ingredients: <%= food.ingredients %></li>
     </ul>
     <% if (food.owner.equals(user?.profile._id)) { %>
       <form action="/foods/<%= food._id %>/edit" method="GET">
