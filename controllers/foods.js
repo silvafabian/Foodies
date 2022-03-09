@@ -67,7 +67,7 @@ function update(req, res) {
       })
     } 
     else {
-      throw new Error ('🚫 Not authorized 🚫')
+      throw new Error ('HAHA NOT ALLOWED')
     }
   })
   .catch(err => {
