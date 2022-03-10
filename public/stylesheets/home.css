@@ -7,10 +7,30 @@ body{
 }
 
 p {
-  background-color: #C0C0C0;
+  background-color: #c0c0c0b6;
   color: black;
   text-align: center;
   width: 45%;
   display: block;
   margin: auto;
 }
+
+div {
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  color: #FF4500;
+  margin: 15px;
+  padding: 15px;
+}
+
+.profile {
+  margin: auto;
+  padding: 25px;
+}
+.navbar {
+  color: white;
+}
+
