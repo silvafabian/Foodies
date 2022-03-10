@@ -107,12 +107,10 @@ function createReview(req, res) {
 
 function deleteReview(req, res) {
   Food.findById(req.params.id, function(err, food) {
-    if(food.owner.equals(req.user.profile._id)) {
-      food.reviews.id(req.params.reviewId).remove()
-      food.save(function(err){
-        res.redirect(`/foods/${food._id}`)
-      })
-    }
+    food.reviews.id(req.params.reviewId).remove()
+    food.save(function(err){
+      res.redirect(`/foods/${food._id}`)
+    })
   })
 }
 
