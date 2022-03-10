@@ -25,12 +25,31 @@ ul {
   flex-wrap: wrap;
   align-items: center;
 }
-h1, h2 {
+h1 {
+  background-color: #c0c0c0b6;
+  color: black;
+  width: 20vh;
+  border-radius: 7px 7px 0 0 ;
+  text-align: center;
+  margin: auto;
+}
+
+h2 {
+  background-color: #c0c0c0b6;
+  color: black;
+  width: 20vh;
+  border-radius: 0 0 7px 7px;
+  text-align: center;
+  margin: auto;
+}
+
+h3 {
   background-color: #c0c0c0b6;
   color: black;
   width: 20vh;
   border-radius: 7px;
   text-align: center;
+  position: relative;
   margin: auto;
 }
 

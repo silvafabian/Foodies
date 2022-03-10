@@ -27,12 +27,13 @@
       <button type="submit" id="add-food">Add Food</button>
     </form>
   <% } %>
-  <h2>Explore new food!</h2>
+  <h3>Explore new food!</h3>
 	<ul>
   <% foods.forEach(food => { %>
     <div class="card">
       <div class="card-body">
-        <p class="card-text"><%= food.name %></p>
+        <p class="card-text">Dish: <%= food.name %></p>
+        <p class="card-text">Time: <%= food.prepTime %></p>
       </div>
       <button class="food-details"><a class="food-details" href="/foods/<%= food._id %>">Details</a></button>
     </div>

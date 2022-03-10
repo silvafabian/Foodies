@@ -56,10 +56,12 @@
               <td><%= review.content %></td>
               <td><%= review.rating %></td>
               <td>
-                <form 
-                  action="/foods/<%= food._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
-                  <button>X</button>
-                </form>
+                <% if (review.owner.equals(user?.profile._id)) { %>
+                  <form 
+                    action="/foods/<%= food._id %>/reviews/<%= review._id %>?_method=DELETE" method="POST">
+                    <button>X</button>
+                  </form>
+                <% } %>
               </td>
             </tr>
           <% }) %>
