@@ -10,6 +10,7 @@
         <li>Name: <%= food.name %></li>
         <li>Prep Time: <%= food.prepTime %></li>
         <li>Ingredients: <%= food.ingredients %></li>
+        <li>Directions: <%= food.directions %></li>
       </ul>
     </div>
     <% if (food.owner.equals(user?.profile._id)) { %>

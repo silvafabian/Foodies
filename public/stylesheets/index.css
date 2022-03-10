@@ -7,10 +7,6 @@ body{
   color: #DEE2E6;
 }
 
-label {
-  margin-top: 15px;
-}
-
 input {
   background-color: #495057;
 }
@@ -54,7 +50,10 @@ h3 {
 }
 
 label {
-  color: rgb(186, 128, 128);
+  color: black;
+  background-color: #c0c0c0b6;
+  margin-top: 15px;
+  border-radius: 7px;
 }
 
 .navbar {
@@ -67,19 +66,32 @@ label {
   background-color: #a2d2ff;
 }
 
-.card {
+.card{
   color: #212529;
   width: 18%;
   margin: 15px;
   background-color: #dee2e6;
-  text-align: center;
+}
+
+.card-body {
+  display: flex;
+}
+
+.card-text {
+  text-align: justify;
 }
 
 .add-food {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
   align-content: space-around;
+}
+
+.content-textarea {
+  background-color: #495057;
+  font-size: 1.3rem;
 }
 
 #add-food {

@@ -22,6 +22,9 @@ const foodSchema = new Schema ({
   ingredients: {
     type: String,
   },
+  directions: {
+    type: String,
+  },
   owner: {type: Schema.Types.ObjectId, ref: "Profile"},
   reviews: [reviewSchema],
 }, {

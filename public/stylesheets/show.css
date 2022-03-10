@@ -14,18 +14,19 @@ p {
   margin: auto;
 }
 
-h2 {
+/* h2 {
   color: #FF4500;
   margin: 15px;
   padding: 15px;
-}
+} */
 
 ul {
   display: inline;
 }
 
 li {
-  display: inline-flex;
+  display: flex;
+
 }
 
 table {
@@ -65,9 +66,22 @@ tfoot th {
 }
 
 form {
-  display: inline-block;
+  display: inline;
+}
+
+.btn {
+  font-size: 1.8rem;
+  background-color: #c0c0c0b6;
+  align-self: center;
 }
 
 .navbar {
   color: white;
+}
+
+
+#add-review-form {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-around;
 }
