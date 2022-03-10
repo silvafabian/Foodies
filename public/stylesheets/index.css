@@ -68,17 +68,16 @@ label {
 
 .card{
   color: #212529;
-  width: 18%;
+  width: 15%;
+  height: 10%;
   margin: 15px;
   background-color: #dee2e6;
 }
 
 .card-body {
   display: flex;
-}
-
-.card-text {
-  text-align: justify;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .add-food {

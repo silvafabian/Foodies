@@ -21,7 +21,10 @@ div {
 }
 
 h1 {
-  color: #FF4500;
+  background-color: #c0c0c0b6;
+  color: black;
+  display: flex;
+  justify-content: center;
   margin: 15px;
   padding: 15px;
 }
