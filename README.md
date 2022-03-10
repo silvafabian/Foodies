@@ -34,4 +34,14 @@ Upon landing to the home page, you'll be greeted by a welcoming message and a li
 
 ---
 
-Icebox
+Icebox Features:
+
+* Implement a viable ingredients tab that will display all of the ingridients listed on our site.
+* Add content to the profiles :id page that will list their favorite food, ingredients, and time since signing up.
+* Add a scrollable review bar so that the reviews are contained into one specific area insteas of expanding
+* Create a more versatile navbar for a better user experience
+* Add a search bar for easier access to the content of your choosing
+
+---
+Credits: 
+  - Background image by Victoria Shes: https://unsplash.com/photos/UC0HZdUitWY
