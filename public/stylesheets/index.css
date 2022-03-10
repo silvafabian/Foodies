@@ -2,7 +2,7 @@ body{
   background-image: url('../images/pages/dark-food-mixed.jpg');
   background-size: cover;
   image-rendering: pixelated;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(5px);
   height: 100vh;
   color: #DEE2E6;
 }
