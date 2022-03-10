@@ -3,11 +3,15 @@
 <% } %>
 </head>
 <body>
-  <nav>
-    <div>
-      <a href="/foods">Foods</a>
-      <a href="/profiles">Profiles</a>
-    </div>
+  <nav class="navbar navbar-light" style="background-color: #1f1d13a5;">
+    <div class="container-fluid">
+      <a href="/">
+        <i class="fas fa-utensils fa-2x"></i>
+      </a>
+      <a class="navbar-brand" href="/">Home</a>
+      <a class="navbar-brand" href="/foods">All Foods</a>
+      <a class="navbar-brand" href="/profiles">Profiles</a>
+      <a class="navbar-brand" href="/ingredients">Ingredients</a>
     <% if (user) { %>
       <div>
         <a href="/auth/logout">
@@ -16,9 +20,10 @@
     <% } else { %>
         <a href="/auth/google" class="siwg-link">
         <button type="submit" class="siwg">
-          <img id="siwg-image" alt="Sign in with Google" />
+          <img id="siwg-image" alt="Sign in with Google"/>
         </button>
         </a>
       </div>
     <% } %>
+    </div>
   </nav>

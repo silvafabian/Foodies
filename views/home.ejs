@@ -1,0 +1,22 @@
+<%- include('./partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/home.css">
+<%- include('./partials/nav') %>
+
+<main>
+  <div class="home-page">
+    <h1>Welcome, <%= user ? user.profile.name : "Fellow Foodie!" %></h1>
+    <% if (user?.profile.avatar) { %>
+      <div>
+        <img
+          src="<%= user.profile.avatar %>"
+          alt="<%= user.profile.name %> avatar"
+        />
+      </div>
+    <% } %>
+
+    <p>
+      Foodie is a fun and easy site to use regarding all things food! Simply login using your Google Account and the explore the Site! <br> Foodies was originally created as an easy, go-to spot to see various recipes from various users. From there, you're able to create the recipes, try them out yourself, give them a rating and review, and even upload your own family recipes! We encourage a fun and joyful food life, so come join us!
+    </p>
+  </div>
+
+<%- include('./partials/footer') %>

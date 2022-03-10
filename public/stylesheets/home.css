@@ -1,0 +1,16 @@
+body{
+  background-image: url('../images/pages/dark-food-mixed.jpg');
+  background-size: cover;
+  image-rendering: pixelated;
+  backdrop-filter: blur(4px);
+  height: 100vh;
+}
+
+p {
+  background-color: #C0C0C0;
+  color: black;
+  text-align: center;
+  width: 45%;
+  display: block;
+  margin: auto;
+}
