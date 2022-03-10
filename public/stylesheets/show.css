@@ -14,19 +14,22 @@ p {
   margin: auto;
 }
 
-/* h2 {
-  color: #FF4500;
-  margin: 15px;
-  padding: 15px;
-} */
+div, h2 {
+  color: black;
+}
+
+
+h3 {
+  margin-top: 35%;
+  color: black;
+}
 
 ul {
-  display: inline;
+  text-align: center;
 }
 
 li {
-  display: flex;
-
+  /* display: flex; */
 }
 
 table {
@@ -34,6 +37,7 @@ table {
   border-collapse: collapse;
   border: 3px solid rgb(206, 166, 96);
   background-color: rgb(198, 183, 159);
+  margin-top: 35%;
 }
 
 thead th:nth-child(1) {
@@ -67,6 +71,20 @@ tfoot th {
 
 form {
   display: inline;
+  height: 18px;
+}
+
+.food-info {
+  color: #002ab3;
+  margin: 0 auto;
+  margin-left: 0;
+}
+
+.info {
+  background-color: #c0c0c0b6;
+  color:black;
+  margin-top: 30px;
+  border-radius: 7px;
 }
 
 .btn {
@@ -79,9 +97,21 @@ form {
   color: white;
 }
 
+.review-form {
+  display: flex;
+  align-items: center;
+}
+
+.add-review {
+  width: 30%;
+}
 
 #add-review-form {
   display: flex;
-  flex-flow: row wrap;
-  align-content: space-around;
+  flex-direction: column;
+}
+
+#rating-select {
+  height: 25px;
+  width: 35px;
 }

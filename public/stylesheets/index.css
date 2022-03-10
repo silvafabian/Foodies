@@ -47,6 +47,8 @@ h3 {
   text-align: center;
   position: relative;
   margin: auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 label {
@@ -54,6 +56,8 @@ label {
   background-color: #c0c0c0b6;
   margin-top: 15px;
   border-radius: 7px;
+  display: flex;
+  align-items: center;
 }
 
 .navbar {
@@ -93,6 +97,22 @@ label {
   font-size: 24px;
 }
 
+.direction-form {
+  display: flex;
+}
+
+.direction-form label {
+  margin: 0;
+}
+
+.prep-time {
+  height: 37px;
+}
+
+.prep-time p, .prep-time input {
+  margin: 0;
+}
+
 #add-food {
   height: 30px;
   margin-top: 15px;
@@ -100,3 +120,5 @@ label {
   line-height: 0;
   height: 1005;
 }
+
+

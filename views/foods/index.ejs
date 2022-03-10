@@ -9,23 +9,25 @@
   <% if (user) { %>
     <h2>Add some Food!</h2>
     <form action="/foods" method="POST" class="add-food">
-      <label>
-        Name: 
+      <label class="prep-time">
+        <p>Name:</p>  
         <input type="text" name="name" autocomplete="off">
       </label>
       <br>
-      <label>
-        Ingredients:
+      <label class="prep-time">
+        <p>Ingredients:</p> 
         <input type="text" name="ingredients">
       </label>
       <br>
-      <label>
-        Prep Time:
+      <label class="prep-time">
+        <p>Prep Time:</p>
         <input type="number" name="prepTime" min="1" max="1000">
       </label>
       <br>
-      <label for="content-textarea">Directions:</label>
-      <textarea name="directions" class="content-textarea"></textarea>
+      <div class="direction-form">
+        <label for="content-textarea">Directions:</label>
+        <textarea name="directions" class="content-textarea"></textarea>
+      </div>
       <button type="submit" id="add-food">Add Food</button>
     </form>
   <% } %>

@@ -5,12 +5,12 @@
 <main>
   <section>
     <p>Originally Created By: <%= food.owner.name %></p>
-    <div>
+    <div class="info">
       <ul>
-        <li>Name: <%= food.name %></li>
-        <li>Prep Time: <%= food.prepTime %></li>
-        <li>Ingredients: <%= food.ingredients %></li>
-        <li>Directions: <%= food.directions %></li>
+        <li> <span class="food-info">Name: </span> <%= food.name %></li>
+        <li> <span class="food-info"> Prep Time: </span> <%= food.prepTime %></li>
+        <li> <span class="food-info"> Ingredients: </span> <%= food.ingredients %></li>
+        <li> <span class="food-info"> Directions: </span><%= food.directions %></li>
       </ul>
     </div>
     <% if (food.owner.equals(user?.profile._id)) { %>
@@ -27,17 +27,21 @@
     id="add-review-form"
     method="post"
   >
-    <label for="content-textarea">Review:</label>
-    <textarea name="content" id="content-textarea"></textarea>
-    <label for="rating-select">Rating:</label>
-    <select name="rating" id="rating-select">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5" selected>5</option>
-    </select>
-    <button type="submit">Add Review</button>
+    <div class="review-form">
+      <label for="content-textarea">Review:</label>
+      <textarea name="content" id="content-textarea"></textarea>
+    </div>
+    <div>
+      <label for="rating-select">Rating:</label>
+      <select name="rating" id="rating-select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected>5</option>
+      </select>
+    </div>
+    <button type="submit" class="add-review">Add Review</button>
   </form>
     <% if (food.reviews.length) { %>
       <table>
