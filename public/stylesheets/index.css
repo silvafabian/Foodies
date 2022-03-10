@@ -26,6 +26,10 @@ ul {
   align-items: center;
 }
 
+.navbar {
+  color: white;
+}
+
 .food-details {
   color: red;
   text-decoration: none;
