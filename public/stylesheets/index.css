@@ -25,20 +25,48 @@ ul {
   flex-wrap: wrap;
   align-items: center;
 }
+h1, h2 {
+  background-color: #c0c0c0b6;
+  color: black;
+  width: 20vh;
+  border-radius: 7px;
+  text-align: center;
+  margin: auto;
+}
+
+label {
+  color: rgb(186, 128, 128);
+}
 
 .navbar {
   color: white;
 }
 
 .food-details {
-  color: red;
+  color: #212529;
   text-decoration: none;
+  background-color: #a2d2ff;
 }
 
 .card {
-  color: #343a40;
-  width: 25%;
-  margin: 15px 15px 15px 15px;
-  background-color: #adb5bd;
+  color: #212529;
+  width: 18%;
+  margin: 15px;
+  background-color: #dee2e6;
   text-align: center;
+}
+
+.add-food {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-content: space-around;
+}
+
+#add-food {
+  height: 30px;
+  margin-top: 15px;
+  padding: 15px;
+  line-height: 0;
+  height: 1005;
 }

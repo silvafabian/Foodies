@@ -8,7 +8,7 @@
   <h1>Food! 🍔 🌭 🍕</h1>
   <% if (user) { %>
     <h2>Add some Food!</h2>
-    <form action="/foods" method="POST">
+    <form action="/foods" method="POST" class="add-food">
       <label>
         Name: 
         <input type="text" name="name" autocomplete="off">
@@ -24,7 +24,7 @@
         <input type="number" name="prepTime" min="1" max="1000">
       </label>
       <br>
-      <button type="submit">Add Food</button>
+      <button type="submit" id="add-food">Add Food</button>
     </form>
   <% } %>
   <h2>Explore new food!</h2>
@@ -34,7 +34,7 @@
       <div class="card-body">
         <p class="card-text"><%= food.name %></p>
       </div>
-      <button><a class="food-details" href="/foods/<%= food._id %>">Details</a></button>
+      <button class="food-details"><a class="food-details" href="/foods/<%= food._id %>">Details</a></button>
     </div>
   <% }) %>
   </ul>

@@ -1,0 +1,73 @@
+body{
+  background-image: url('../images/pages/dark-food-mixed.jpg');
+  background-size: cover;
+  image-rendering: pixelated;
+  backdrop-filter: blur(4px);
+  height: 100vh;
+}
+
+p {
+  background-color: #c0c0c0b6;
+  color: black;
+  text-align: center;
+  width: 45%;
+  margin: auto;
+}
+
+h2 {
+  color: #FF4500;
+  margin: 15px;
+  padding: 15px;
+}
+
+ul {
+  display: inline;
+}
+
+li {
+  display: inline;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 3px solid rgb(206, 166, 96);
+  background-color: rgb(198, 183, 159);
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+th, td {
+  padding: 20px;
+}
+thead th, tfoot th, td {
+  font-family: 'Rock Salt', cursive;
+}
+
+th {
+  letter-spacing: 2px;
+  color: black;
+}
+
+td {
+  letter-spacing: 1px;
+  color: black;
+}
+
+tbody td {
+  text-align: center;
+}
+
+tfoot th {
+  text-align: right;
+}
+
+form {
+  display: inline-block;
+}
+
+.navbar {
+  color: white;
+}
