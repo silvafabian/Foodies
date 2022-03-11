@@ -7,9 +7,7 @@
 
 ### Click <a href="http://fabian-foodies.herokuapp.com/" target="_blank">Foodies</a> to be launched ito the app.
 
-Upon landing to the home page, you'll be greeted by a welcoming message and a little background info on the site. You will need to sign in using Google to proceed to any other section of the app. This is to ensure only true Foodies interact with the page. From there, you're able to explore the site freely. Click on the 'All Foods' link on the navbar to be redirected to the list of food. the 'Profiles' link will send you to the list of all of our current members! The 'Ingredients tab will eventually give you a list of all the ingredients on the site with some detail regarding their use and taste for you to explore new flavors.
-
-#### Please be advised that this is a continuously changing app and some features my be unable during your visit to the site. We appreciate your understanding as we try to expand upon the app!
+Upon landing to the home page, you'll be greeted by a welcoming message and a little background info on the site. You will need to sign in using Google to proceed to any other section of the app. This is to ensure only true Foodies interact with the page. From there, you're able to explore the site freely. Click on the 'All Foods' link on the navbar to be redirected to the list of food. the 'Profiles' link will send you to the list of all of our current members! 
 
 ---
 
