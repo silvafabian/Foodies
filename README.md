@@ -1,5 +1,5 @@
 # Welcome to Foodies!
-#### A food web-app for all things regarding food. Originally created as an easy, go-to place to have all your recipes. Browse other people's profiles and recipes as they add their own to our site!
+#### A food web-app for all things regarding food. This was riginally created as an easy, go-to place to house all of my recipes. Browse other people's profiles and recipes as they add their own to our site!
 
 ---
 

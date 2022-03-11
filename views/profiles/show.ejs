@@ -12,7 +12,7 @@
       >
     </div>
   <% } %>
-  <h1>Welcome to <%= isSelf ? "your" : profile.name%> Profile!</h1>
+  <h1><%= isSelf ? "your" : profile.name%> welcomes you!</h1>
 </main>
 
 <%- include('../partials/footer') %>
